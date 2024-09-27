@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tes/page/homepage.dart';
+import 'package:tes/page/profile.dart';
 import 'package:tes/page/search.dart';
 
 class Home extends StatelessWidget {
@@ -12,10 +13,10 @@ class Home extends StatelessWidget {
       child: Scaffold(
         body: TabBarView(
           children: [
-           Homepage(),
-          Search(),
+            Homepage(),
+            Search(),
             Center(child: Text("Notifications Page")),
-            Center(child: Text("Profile Page")),
+            Profile(),
           ],
         ),
         bottomNavigationBar: TabBar(
@@ -26,7 +27,8 @@ class Home extends StatelessWidget {
             Tab(icon: Icon(Icons.person), text: "Profile"),
           ],
           labelColor: Colors.black, // Warna label tab yang aktif
-          unselectedLabelColor: Colors.blueGrey, // Warna label tab yang tidak aktif
+          unselectedLabelColor:
+              Colors.blueGrey, // Warna label tab yang tidak aktif
           indicatorSize: TabBarIndicatorSize.label,
         ),
       ),

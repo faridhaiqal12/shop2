@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tes/page/menu/instant.dart';
+import 'package:tes/page/menu/seafood.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -138,7 +140,9 @@ class Homepage extends StatelessWidget {
                             ),
                     child: ListTile(
                       leading: Title(color: Colors.black, child: const Text("SEAFOOD",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w800,fontSize: 25),)),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (_) => Seafood()));
+                      },
                     ),
                   ),
                   const SizedBox(
@@ -153,7 +157,9 @@ class Homepage extends StatelessWidget {
                             ),
                     child: ListTile(
                       leading: Title(color: Colors.black, child: const Text("INSTANT FOOD",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w800,fontSize: 25),)),
-                      onTap: () {},
+                      onTap: () {
+                         Navigator.of(context).push(MaterialPageRoute(builder: (_) => Instant()));
+                      },
                     ),
                   ),
                   const SizedBox(

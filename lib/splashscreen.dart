@@ -20,12 +20,13 @@ class _SplashScreenState extends State<SplashScreen>
     // TODO: implement initState
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Future.delayed(Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 4), () {
       Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (_) => Home()));
+          .pushReplacement(MaterialPageRoute(builder: (_) => const Home()));
     });
   }
 
+  @override
   void dispose() {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
         overlays: SystemUiOverlay.values);
@@ -37,11 +38,11 @@ class _SplashScreenState extends State<SplashScreen>
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: const BoxDecoration(color: Color.fromRGBO(251, 3, 48, 30)),
+        decoration: const BoxDecoration(color: Colors.white),
         child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           Icon(Icons.brightness_7_outlined,color: Colors.white,size: 130,)
+           Icon(Icons.brightness_7_outlined,color: Colors.black,size: 130,)
           ],
         ),
       ),

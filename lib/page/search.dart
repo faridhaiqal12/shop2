@@ -12,12 +12,12 @@ class Search extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.all(Radius.circular(25))
               ),
-              child: TextField(
-                
+              child: const TextField(
+          textInputAction: TextInputAction.go,
               ),
             ),
           )
